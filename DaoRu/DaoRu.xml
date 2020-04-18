@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DaoRu</name>
+    </assembly>
+    <members>
+        <member name="P:DaoRu.ApiContext.ImportStudentDtos">
+            <summary>
+            数据模型
+            </summary>
+        </member>
+        <member name="M:DaoRu.ExportExcelHelper.CreateExcelPackage``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.String,System.String,System.Int32)">
+            <summary>
+            创建Excel包
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="datas">数据源</param>
+            <param name="columnNames">属性对应的值</param>
+            <param name="outOfColumns">额外的列</param>
+            <param name="sheetName">Sheet名</param>
+            <param name="title">标题</param>
+            <param name="isProtected">是否进行锁</param>
+            <returns></returns>
+        </member>
+        <member name="M:DaoRu.ExportExcelHelper.GetByteToExportExcel``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.String,System.String,System.Int32)">
+            <summary>
+            导出表到Excel
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="datas">数据源</param>
+            <param name="columnNames"></param>
+            <param name="outOfColumn"></param>
+            <param name="sheetName"></param>
+            <param name="title"></param>
+            <param name="isProtected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaoRu.ImportExcelHelper.ImportExcelFile(System.String)">
+            <summary>
+            从excel文件导入数据
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaoRu.ImportExcelHelper.GetDataTable(OfficeOpenXml.ExcelPackage)">
+            <summary>
+            /它创建一个数据表，该数据表具有excel文件中相同克隆值
+            </summary>
+            <param name="excelPackage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaoRu.ImportExcelHelper.FillModelOne``1(System.Data.DataTable)">
+            <summary>  
+            填充对象列表：用DataTable填充实体类
+            </summary>  
+        </member>
+        <member name="M:DaoRu.ImportExcelHelper.FillModel``1(System.Data.DataTable)">
+            <summary>  
+            填充对象列表：用DataTable填充实体类
+            </summary>  
+        </member>
+        <member name="T:DaoRu.Models.ImportStudentDto">
+            <summary>
+            导入学生数据Dto
+            IsLabelingError：是否标注数据错误
+            </summary>
+        </member>
+        <member name="P:DaoRu.Models.ImportStudentDto.SerialNumber">
+            <summary>
+                序号
+            </summary>
+        </member>
+        <member name="P:DaoRu.Models.ImportStudentDto.StudentCode">
+            <summary>
+                学籍号
+            </summary>
+        </member>
+        <member name="P:DaoRu.Models.ImportStudentDto.Name">
+            <summary>
+                姓名
+            </summary>
+        </member>
+        <member name="P:DaoRu.Models.ImportStudentDto.IdCard">
+            <summary>
+                身份证号码
+            </summary>
+        </member>
+        <member name="P:DaoRu.Models.ImportStudentDto.Gender">
+            <summary>
+                性别
+            </summary>
+        </member>
+        <member name="T:DaoRu.Models.Genders">
+            <summary>
+                性别
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.Genders.男">
+            <summary>
+                男
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.Genders.女">
+            <summary>
+                女
+            </summary>
+        </member>
+        <member name="T:DaoRu.Models.StudentStatus">
+            <summary>
+                学生状态 正常、流失、休学、勤工俭学、顶岗实习、毕业、参军
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.Normal">
+            <summary>
+                正常
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.PupilsAway">
+            <summary>
+                流失
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.Suspension">
+            <summary>
+                休学
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.WorkStudy">
+            <summary>
+                勤工俭学
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.PostPractice">
+            <summary>
+                顶岗实习
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.Graduation">
+            <summary>
+                毕业
+            </summary>
+        </member>
+        <member name="F:DaoRu.Models.StudentStatus.JoinTheArmy">
+            <summary>
+                参军
+            </summary>
+        </member>
+    </members>
+</doc>
