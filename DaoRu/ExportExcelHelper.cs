@@ -1,4 +1,5 @@
-﻿using OfficeOpenXml;
+﻿using ClosedXML.Excel;
+using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
 using System.Collections.Generic;
@@ -111,6 +112,29 @@ namespace DaoRu
                     }
                 }
             });
+        }
+
+
+        public static void ExportData<T>(Dictionary<string, string> properties, IQueryable<T> datas, IXLWorksheet worksheet, int currentRow = 1)
+        {
+            Type myType = typeof(T);
+            List<PropertyInfo> myPro = new List<PropertyInfo>();
+            foreach (var key in properties.Keys)
+            {
+                PropertyInfo p = myType.GetProperty(key);
+                myPro.Add(p);
+            }
+            foreach (T q in datas)
+            {
+                currentRow++;
+                int column = 1;
+
+                foreach (var p in myPro)
+                {
+                    worksheet.Cell(currentRow, column).Value = p.GetValue(q, null);
+                    column++;
+                }
+            }
         }
 
     }

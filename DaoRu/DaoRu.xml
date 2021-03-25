@@ -9,6 +9,13 @@
             数据模型
             </summary>
         </member>
+        <member name="M:DaoRu.Controllers.ImporterController.GetDebtStatistics(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            自定义导出
+            </summary>
+            <param name="needproperties">>需要导出的表头属性</param>
+            <returns></returns>
+        </member>
         <member name="M:DaoRu.ExportExcelHelper.CreateExcelPackage``1(System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String},System.String,System.String,System.Int32)">
             <summary>
             创建Excel包
